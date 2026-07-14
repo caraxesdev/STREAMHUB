@@ -36,4 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Change slide every 5 seconds
         setInterval(nextSlide, 3000);
     }
+
+    const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+if(menuToggle){
+    menuToggle.addEventListener("click",()=>{
+        navLinks.classList.toggle("active");
+    });
+}
 });

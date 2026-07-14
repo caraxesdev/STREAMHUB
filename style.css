@@ -352,21 +352,7 @@ ul {
   transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    /* In a real app we would add a hamburger menu */
-  }
 
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
 
 
 
@@ -408,4 +394,156 @@ ul {
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+ 
+
+/* Hamburger Menu */
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* Desktop */
+@media (min-width:769px){
+
+    .menu-toggle{
+        display:none !important;
+    }
+
+    .nav-links{
+        display:flex !important;
+        position:static;
+        flex-direction:row;
+        gap:30px;
+        background:none;
+        width:auto;
+        padding:0;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    /* Navbar */
+
+    .navbar{
+        background:#000;
+        padding:15px 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:2rem;
+    }
+
+    .nav-brand{
+        font-size:1.6rem;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        padding:20px 0;
+        z-index:999;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li a{
+        font-size:1rem;
+    }
+
+    /* Hero */
+
+    .hero{
+        height:70vh;
+        margin-top:70px;
+    }
+
+    .hero-content{
+        left:20px;
+        right:20px;
+        bottom:15%;
+        max-width:100%;
+    }
+
+    .hero-title{
+        font-size:2rem;
+        line-height:1.15;
+    }
+
+    .hero-desc{
+        font-size:1rem;
+    }
+
+    .btn-primary{
+        font-size:1rem;
+        padding:10px 22px;
+    }
+
+    /* Sections */
+
+    .section{
+        padding:30px 15px;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    /* Cards */
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    /* About */
+
+    .about-container{
+        margin:100px 15px 30px;
+        padding:20px;
+    }
+
+    /* Episode */
+
+    .episode-container{
+        margin:100px 15px 30px;
+        padding:20px;
+    }
+
+    .episode-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .btn-episode-play{
+        width:100%;
+        text-align:center;
+    }
+
 }
