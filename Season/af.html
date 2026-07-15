@@ -1,193 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIMATHUHINA - Episodes</title>
+    <title>StreamHub - Ben 10 Alien Force</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Unavailable episode button styling */
+        .btn-episode-play.unavailable {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-episode-play.unavailable:hover {
+            transform: none;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .unavailable-badge {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            opacity: 0.6;
+            margin-left: 8px;
+        }
+    </style>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body class="ben-bg">
 
     <!-- Navigation Bar -->
-   <nav class="navbar">
-    <div class="nav-brand">STREAMHUB</div>
+    <header>
+        <nav class="navbar glass">
+            <div class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5V19L19 12L8 5Z" />
+                </svg>
+                STREAMHUB
+            </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html" class="active">Home</a></li>
-        <li><a href="../movies.html">Movies</a></li>
-        <li><a href="../tvseries.html">Korean Dubbed</a></li>
-        <li><a href="../cartoon.html">Cartoons</a></li>
-        <li><a href="../about.html">About</a></li>
-    </ul>
-</nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../movies.html">Movies</a></li>
+                <li><a href="../tvseries.html">Series</a></li>
+                <li><a href="../cartoon.html" class="active">Cartoons</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Episodes Section -->
-    <div class="episode-container">
-        <h1 class="episode-header">BEN 10 ALION FORCE- Season 01</h1>
+    <main>
+        <div class="episode-container glass" data-animate="fade-up">
+            <h1 class="episode-header">Ben 10 Alien Force — Season 1</h1>
 
-        <div class="episode-list">
+            <div class="episode-list">
+
                 <div class="episode-item">
-    <div>
-        <span class="episode-number">1</span>
-        <span class="episode-title">EPISODE 1</span>
-    </div>
-<a href="#" class="btn-episode-play unavailable">Play</a>
-</div>
+                    <div class="episode-info">
+                        <span class="episode-number">01</span>
+                        <span class="episode-title">EPISODE 1</span>
+                    </div>
+                    <a href="#" class="btn-episode-play unavailable">Unavailable</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">2</span>
-        <span class="episode-title">EPISODE 2</span>
-    </div>
-    <a href="../player.html?type=drive&id=147MC72_qsh_w2YDamdiTryxXogayUDaw" class="btn-episode-play">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">02</span>
+                        <span class="episode-title">EPISODE 2</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=147MC72_qsh_w2YDamdiTryxXogayUDaw" class="btn-episode-play">Play</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">3</span>
-        <span class="episode-title">EPISODE 3</span>
-    </div>
-<a href="#" class="btn-episode-play unavailable">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">03</span>
+                        <span class="episode-title">EPISODE 3</span>
+                    </div>
+                    <a href="#" class="btn-episode-play unavailable">Unavailable</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">4</span>
-        <span class="episode-title">EPISODE 4</span>
-    </div>
-<a href="#" class="btn-episode-play unavailable">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">04</span>
+                        <span class="episode-title">EPISODE 4</span>
+                    </div>
+                    <a href="#" class="btn-episode-play unavailable">Unavailable</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">5</span>
-        <span class="episode-title">EPISODE 5</span>
-    </div>
-    <a href="../player.html?type=drive&id=13wmkWOUEEDx7XY4afyYNROsGxT5fSLBv" class="btn-episode-play">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">05</span>
+                        <span class="episode-title">EPISODE 5</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=13wmkWOUEEDx7XY4afyYNROsGxT5fSLBv" class="btn-episode-play">Play</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">6</span>
-        <span class="episode-title">EPISODE 6</span>
-    </div>
-    <a href="../player.html?type=drive&id=14B1nMXYRl04Q3uMOjbzKqQCLQBtvzYXl" class="btn-episode-play">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">06</span>
+                        <span class="episode-title">EPISODE 6</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=14B1nMXYRl04Q3uMOjbzKqQCLQBtvzYXl" class="btn-episode-play">Play</a>
+                </div>
 
-<!-- Episode 7 - No ID Available -->
-<div class="episode-item">
-    <div>
-        <span class="episode-number">7</span>
-        <span class="episode-title">EPISODE 7</span>
-    </div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">07</span>
+                        <span class="episode-title">EPISODE 7</span>
+                    </div>
+                    <a href="#" class="btn-episode-play unavailable">Unavailable</a>
+                </div>
 
-    <a href="#" class="btn-episode-play unavailable">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">08</span>
+                        <span class="episode-title">EPISODE 8</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=14BKB64R4CnSJH_otPt4yBaEyWXOXLwKN" class="btn-episode-play">Play</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">8</span>
-        <span class="episode-title">EPISODE 8</span>
-    </div>
-    <a href="../player.html?type=drive&id=14BKB64R4CnSJH_otPt4yBaEyWXOXLwKN" class="btn-episode-play">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">09</span>
+                        <span class="episode-title">EPISODE 9</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=14CKAyUXKbaAxzC1ml2HDiqHG14zhesxk" class="btn-episode-play">Play</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">9</span>
-        <span class="episode-title">EPISODE 9</span>
-    </div>
-    <a href="../player.html?type=drive&id=14CKAyUXKbaAxzC1ml2HDiqHG14zhesxk" class="btn-episode-play">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">10</span>
+                        <span class="episode-title">EPISODE 10</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=14HUfXmkDmo3laZGFONydwC74m3PMUYS_" class="btn-episode-play">Play</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">10</span>
-        <span class="episode-title">EPISODE 10</span>
-    </div>
-    <a href="../player.html?type=drive&id=14HUfXmkDmo3laZGFONydwC74m3PMUYS_" class="btn-episode-play">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">11</span>
+                        <span class="episode-title">EPISODE 11</span>
+                    </div>
+                    <a href="#" class="btn-episode-play unavailable">Unavailable</a>
+                </div>
 
-<!-- Episode 11 - No ID Available -->
-<div class="episode-item">
-    <div>
-        <span class="episode-number">11</span>
-        <span class="episode-title">EPISODE 11</span>
-    </div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">12</span>
+                        <span class="episode-title">EPISODE 12</span>
+                    </div>
+                    <a href="../player.html?type=drive&id=14Npo_I-hk_QsYcKAudp4Lx-vnGIZgpXR" class="btn-episode-play">Play</a>
+                </div>
 
-    <a href="#" class="btn-episode-play unavailable">Play</a>
-</div>
+                <div class="episode-item">
+                    <div class="episode-info">
+                        <span class="episode-number">13</span>
+                        <span class="episode-title">EPISODE 13</span>
+                    </div>
+                    <a href="#" class="btn-episode-play unavailable">Unavailable</a>
+                </div>
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">12</span>
-        <span class="episode-title">EPISODE 12</span>
-    </div>
-    <a href="../player.html?type=drive&id=14Npo_I-hk_QsYcKAudp4Lx-vnGIZgpXR" class="btn-episode-play">Play</a>
-</div>
+                <!-- Add more episodes as needed following the same structure -->
 
-<div class="episode-item">
-    <div>
-        <span class="episode-number">13</span>
-        <span class="episode-title">EPISODE 13</span>
-    </div>
-<a href="#" class="btn-episode-play unavailable">Play</a>
-</div>
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Add more episodes as needed following the same structure -->
-
+            </div>
         </div>
-    </div>
+    </main>
 
     <script src="../script.js"></script>
     <script>
-document.querySelectorAll('.unavailable').forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        Swal.fire({
-            icon: 'info',
-            title: 'Episode Not Available',
-            text: 'This episode is not available yet. Please check back later.',
-            confirmButtonText: 'OK',
-            confirmButtonColor: '#e50914',
-            background: '#1a1a1a',
-            color: '#fff',
-            backdrop: 'rgba(0,0,0,0.85)',
-            showClass: {
-                popup: 'animate__animated animate__zoomIn'
-            },
-            hideClass: {
-                popup: 'animate__animated animate__zoomOut'
-            }
+        document.querySelectorAll('.unavailable').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Episode Not Available',
+                    text: 'This episode is not available yet. Please check back later.',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#ff3333',
+                    background: '#121212',
+                    color: '#fff',
+                    backdrop: 'rgba(0,0,0,0.85)',
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 </body>
-
 </html>

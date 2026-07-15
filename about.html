@@ -9,36 +9,46 @@
 <body>
 
     <!-- Navigation Bar -->
-   <nav class="navbar">
-    <div class="nav-brand">STREAMHUB</div>
+    <header>
+        <nav class="navbar glass">
+            <div class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5V19L19 12L8 5Z" />
+                </svg>
+                STREAMHUB
+            </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="tvseries.html">Korean Dubbed</a></li>
-        <li><a href="cartoon.html">Cartoons</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul>
-</nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="tvseries.html">Series</a></li>
+                <li><a href="cartoon.html">Cartoons</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- About Section -->
-    <div class="about-container">
-        <h1 class="about-title">About StreamHub</h1>
-        <p class="about-text">
-            Welcome to StreamHub, your personal media center for Movies and TV Series. 
-            This platform is designed to give you a premium, ad-free streaming experience.
-        </p>
-        <p class="about-text">
-            All videos are securely hosted on Google Drive. Simply navigate through the 
-            Movies or TV Series sections, find what you want to watch, and enjoy your content 
-            with a single click!
-        </p>
-        <a href="index.html" class="btn-primary">Back to Home</a>
-    </div>
+    <main>
+        <section class="section page-header">
+            <div class="about-container glass" data-animate="fade-up">
+                <h2 class="about-title">Welcome to StreamHub</h2>
+                <p class="about-text">
+                    StreamHub is your ultimate destination for unlimited movies, TV series, and more. 
+                    Enjoy a vast collection of premium entertainment from anywhere, at any time.
+                </p>
+                <p class="about-text">
+                    Experience seamless streaming with our modern interface, carefully curated 
+                    content, and exclusive series. Whether you're into thrilling action, heartwarming romance, 
+                    or classic cartoons, StreamHub brings it all directly to your screen.
+                </p>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

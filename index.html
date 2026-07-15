@@ -3,125 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamHub - Home</title>
+    <title>StreamHub - Premium Streaming</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigation Bar -->
-   <nav class="navbar">
-    <div class="nav-brand">STREAMHUB</div>
+    <header>
+        <nav class="navbar glass">
+            <div class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5V19L19 12L8 5Z" />
+                </svg>
+                STREAMHUB
+            </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="tvseries.html">Korean Dubbed</a></li>
-        <li><a href="cartoon.html">Cartoons</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul>
-</nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="tvseries.html">Series</a></li>
+                <li><a href="cartoon.html">Cartoons</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hero Slider Section -->
-    <section class="hero">
-        <!-- Slider Images -->
-        <div class="slide active" style="background-image: url('assets/img01.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/tb.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img03.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img04.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/ambg.png');"></div>
-
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <h1 class="hero-title">Unlimited movies, TV shows, and more.</h1>
-            <p class="hero-desc">Watch anywhere. Hosted on your Google Drive.</p>
-            <a href="movies.html" class="btn-primary">Browse Now</a>
-        </div>
-    </section>
-
-    <!-- Recent Movies Section 
-    <section class="section">
-        <h2 class="section-title">Recent Movies</h2>
-        <div class="grid">
-             Movie Card 1 
-            <div class="card">
-                <img src="assets/img01.jpg" alt="Movie 1">
-                <div class="card-overlay">
-                    <h3 class="card-title">Movie Title 1</h3>
-                     ADD GOOGLE DRIVE LINK HERE: Update the href attribute 
-                    <a href="https://drive.google.com/..." class="btn-play" target="_blank">Play</a>
-                </div>
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <!-- Slider Images -->
+                <div class="slide active" style="background-image: url('assets/img01.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/tb.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/img03.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/img04.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/ambg.png');"></div>
             </div>
             
-        
-    </section>  -->
-    
+            <div class="hero-overlay"></div>
 
-    <!-- Recent TV Series Section -->
-   <!-- TV Series Section -->
-    <section class="section page-header">
-        <h2 class="section-title">Recent TV Series</h2>
-        <div class="grid">
-
-            <!-- TV Series Card -->
-            <div class="card">
-                <img src="assets/hima.png" alt="TV Series Name">
-                <div class="card-overlay">
-                    <h3 class="card-title">HIMATHUHINA</h3>
-                    <!-- ADD GOOGLE DRIVE LINK HERE: Update the href attribute -->
-                    <a href="Episode/ht.html" class="btn-play">Visit</a>
+            <!-- Hero Content -->
+            <div class="hero-content" data-animate="fade-up">
+                <span class="hero-tag">Now Streaming</span>
+                <h1 class="hero-title">Unlimited movies, TV shows, and more.</h1>
+                <p class="hero-desc">Watch anywhere, anytime. Your ultimate destination for premium entertainment and exclusive content.</p>
+                <div class="hero-actions">
+                    <a href="movies.html" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="margin-right: 8px;">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                        Browse Now
+                    </a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
+        </section>
 
-            <!-- TV Series Card -->
-            <div class="card">
-                <img src="assets/img04.jpg" alt="TV Series Name">
-                <div class="card-overlay">
-                    <h3 class="card-title">Mayawarunge Lokaya</h3>
-                    <!-- ADD GOOGLE DRIVE LINK HERE: Update the href attribute -->
-                    <a href="Episode/ml.html" class="btn-play">Visit</a>
-                </div>
+        <!-- Recent TV Series Section -->
+        <section class="section" id="recent-series">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">Trending Series</h2>
+                <a href="tvseries.html" class="section-link">View All <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
+            
+            <div class="bento-grid">
+                <!-- TV Series Card 1 -->
+                <article class="card" data-animate="fade-up">
+                    <img src="assets/hima.png" alt="HIMATHUHINA" loading="lazy">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3 class="card-title">HIMATHUHINA</h3>
+                            <div class="card-meta">
+                                <span>2024</span>
+                                <span>•</span>
+                                <span>Drama</span>
+                            </div>
+                        </div>
+                        <a href="Episode/ht.html" class="btn-play-icon" aria-label="Play HIMATHUHINA">
+                            <svg viewBox="0 0 24 24"><path d="M8 5V19L19 12L8 5Z"/></svg>
+                        </a>
+                    </div>
+                </article>
 
-            <!-- TV Series Card -->
-            <div class="card">
-                <img src="assets/tb.png" alt="TV Series Name">
-                <div class="card-overlay">
-                    <h3 class="card-title">True Beauty</h3>
-                    <!-- ADD GOOGLE DRIVE LINK HERE: Update the href attribute -->
-                    <a href="Episode/tb.html" class="btn-play">Visit</a>
-                </div>
+                <!-- TV Series Card 2 -->
+                <article class="card delay-100" data-animate="fade-up">
+                    <img src="assets/img04.jpg" alt="Mayawarunge Lokaya" loading="lazy">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3 class="card-title">Mayawarunge Lokaya</h3>
+                            <div class="card-meta">
+                                <span>Fantasy</span>
+                            </div>
+                        </div>
+                        <a href="Episode/ml.html" class="btn-play-icon" aria-label="Play Mayawarunge Lokaya">
+                            <svg viewBox="0 0 24 24"><path d="M8 5V19L19 12L8 5Z"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TV Series Card 3 -->
+                <article class="card delay-200" data-animate="fade-up">
+                    <img src="assets/tb.png" alt="True Beauty" loading="lazy">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3 class="card-title">True Beauty</h3>
+                            <div class="card-meta">
+                                <span>Romance</span>
+                            </div>
+                        </div>
+                        <a href="Episode/tb.html" class="btn-play-icon" aria-label="Play True Beauty">
+                            <svg viewBox="0 0 24 24"><path d="M8 5V19L19 12L8 5Z"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TV Series Card 4 -->
+                <article class="card" data-animate="fade-up">
+                    <img src="assets/am.png" alt="AHIMI MATHAKA" loading="lazy">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3 class="card-title">AHIMI MATHAKA</h3>
+                            <div class="card-meta">
+                                <span>Drama</span>
+                            </div>
+                        </div>
+                        <a href="Episode/am.html" class="btn-play-icon" aria-label="Play AHIMI MATHAKA">
+                            <svg viewBox="0 0 24 24"><path d="M8 5V19L19 12L8 5Z"/></svg>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- TV Series Card 5 -->
+                <article class="card delay-100" data-animate="fade-up">
+                    <img src="assets/bf.png" alt="Boys Over Flowers" loading="lazy">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3 class="card-title">Boys Over Flowers</h3>
+                            <div class="card-meta">
+                                <span>Classic Romance</span>
+                            </div>
+                        </div>
+                        <a href="Episode/bf.html" class="btn-play-icon" aria-label="Play Boys Over Flowers">
+                            <svg viewBox="0 0 24 24"><path d="M8 5V19L19 12L8 5Z"/></svg>
+                        </a>
+                    </div>
+                </article>
             </div>
-
-
-            <!-- TV Series Card -->
-            <div class="card">
-                <img src="assets/am.png" alt="TV Series Name">
-                <div class="card-overlay">
-                    <h3 class="card-title">AHIMI MATHAKA</h3>
-                    <!-- ADD GOOGLE DRIVE LINK HERE: Update the href attribute -->
-                    <a href="Episode/am.html" class="btn-play">Visit</a>
-                </div>
-            </div>
-            <!-- TV Series Card -->
-            <div class="card">
-                <img src="assets/bf.png" alt="TV Series Name">
-                <div class="card-overlay">
-                    <h3 class="card-title">Boys Over Flowers</h3>
-                    <!-- ADD GOOGLE DRIVE LINK HERE: Update the href attribute -->
-                    <a href="Episode/bf.html" class="btn-play">Visit</a>
-                </div>
-            </div>
-
-           
-
-            <!-- Add more TV Series Cards here following the same structure -->
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

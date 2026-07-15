@@ -1,23 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar scroll effect
+    // --- Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
+    
+    const handleScroll = () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
-            navbar.classList.add('scrolled');
-            // Wait, for Netflix style we might want it to be fully transparent at top.
-            // Let's actually remove it when at the top.
             navbar.classList.remove('scrolled');
         }
-    });
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial check
+    handleScroll();
 
-    // Handle initial scroll state
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+    // --- Mobile Menu Toggle ---
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            
+            // Prevent scrolling when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu on link click
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove("active");
+                navLinks.classList.remove("active");
+                document.body.style.overflow = '';
+            });
+        });
     }
 
-    // Hero Slider Logic
+    // --- Hero Slider Logic ---
     const slides = document.querySelectorAll('.slide');
     if (slides.length > 0) {
         let currentSlide = 0;
@@ -33,16 +58,30 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.add('active');
         };
 
-        // Change slide every 5 seconds
-        setInterval(nextSlide, 3000);
+        // Change slide every 5 seconds for a slower, more cinematic feel
+        setInterval(nextSlide, 5000);
     }
 
-    const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+    // --- Scroll Animations (Intersection Observer) ---
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    
+    if (animatedElements.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -10% 0px', // Trigger slightly before it comes fully into view
+            threshold: 0.1
+        };
 
-if(menuToggle){
-    menuToggle.addEventListener("click",()=>{
-        navLinks.classList.toggle("active");
-    });
-}
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Stop observing once animated to prevent re-animating
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(el => observer.observe(el));
+    }
 });

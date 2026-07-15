@@ -9,44 +9,43 @@
 <body>
 
     <!-- Navigation Bar -->
-       <nav class="navbar">
-    <div class="nav-brand">STREAMHUB</div>
+    <header>
+        <nav class="navbar glass">
+            <div class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5V19L19 12L8 5Z" />
+                </svg>
+                STREAMHUB
+            </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="tvseries.html">Korean Dubbed</a></li>
-        <li><a href="cartoon.html">Cartoons</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul>
-</nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html" class="active">Movies</a></li>
+                <li><a href="tvseries.html">Series</a></li>
+                <li><a href="cartoon.html">Cartoons</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Movies Section -->
-    <section class="section page-header">
-        <h2 class="section-title">All Movies</h2>
-        <div class="grid">
+    <main>
+        <section class="section page-header" data-animate="fade-up">
+            <h2 class="section-title">All Movies</h2>
             
-            <!-- Movie Card 
-            <div class="card">
-                <img src="assets/img01.jpg" alt="Movie Name">
-                <div class="card-overlay">
-                    <h3 class="card-title">Action Movie</h3>
-                    <!-- ADD GOOGLE DRIVE LINK HERE: Update the href attribute 
-                    <a href="https://drive.google.com/..." class="btn-play" target="_blank">Play</a>
-                </div>
+            <div class="bento-grid" style="margin-top: 40px;">
+                
+                <h3 style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary); padding: 40px 0;">Movies will be available soon!</h3>
+
+                <!-- Add more Movie Cards here following the same structure -->
+
             </div>
-        -->
-
-            <h1>Movis will be available soon!</h1>
-
-            <!-- Add more Movie Cards here following the same structure -->
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
